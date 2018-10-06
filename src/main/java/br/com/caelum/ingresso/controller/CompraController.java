@@ -54,6 +54,9 @@ public class CompraController {
 	public ModelAndView comprar(@Valid Cartao cartao, BindingResult result){
 		ModelAndView modelAndView = new ModelAndView("redirect:/");
 		
+		if(result.hasErrors()){
+			return checkout(cartao);
+		}
 		if(cartao.isValido()){
 			compraDao.save(carrinho.toCompra());
 		}else{
