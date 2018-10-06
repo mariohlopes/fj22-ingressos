@@ -36,6 +36,7 @@ public class Ingresso {
 		this.sessao = sessao;
 		this.preco = tipoDeIngresso.aplicaDesconto(sessao.getPreco());
 		this.lugar = lugar;
+		this.tipoDeIngresso = tipoDeIngresso;
 	}
 	public BigDecimal getPreco(){
 		return preco.setScale(2, RoundingMode.HALF_UP);

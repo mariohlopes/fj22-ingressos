@@ -29,6 +29,7 @@ public class CarrinhoForm {
 			Sessao sessao = sessaoDao.findOne(ingresso.getSessao().getId());
 			Lugar lugar = lugarDao.findOne(ingresso.getLugar().getId());
 			TipoDeIngresso tipoDeIngresso = ingresso.getTipoDeIngresso();
+			System.out.println(tipoDeIngresso);
 			return new Ingresso(sessao, tipoDeIngresso, lugar);
 		}).collect(Collectors.toList());
 	}
