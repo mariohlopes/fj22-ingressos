@@ -45,7 +45,6 @@ public class CompraController {
 	@GetMapping("/compra")
 	public ModelAndView checkout(Cartao cartao){
 		ModelAndView modelAndView = new ModelAndView("compra/pagamento");
-		carrinho.getIngressos().stream().map(Ingresso::getTipoDeIngresso).forEach(System.out::println);
 		modelAndView.addObject("carrinho",carrinho);
 		
 		return modelAndView;

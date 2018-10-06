@@ -2,10 +2,13 @@ package br.com.caelum.ingresso.model;
 
 import java.time.YearMonth;
 
+import javax.validation.constraints.NotNull;
+
 public class Cartao {
 	
 	private String numero;
 	private Integer cvv;
+	@NotNull
 	private YearMonth vencimento;
 	public String getNumero() {
 		return numero;
